@@ -1,17 +1,20 @@
 package com.ttscapstone.capstone.controller;
 
-
 import com.ttscapstone.capstone.model.MovieResponse;
 import com.ttscapstone.capstone.model.TVResponse;
 import com.ttscapstone.capstone.service.MovieService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+// import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+
+@RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class MovieController {
     
     @Autowired
